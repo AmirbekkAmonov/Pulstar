@@ -1045,7 +1045,7 @@ body {
 }
 
 .no-scroll {
-  overflow: hidden; /* Scrolni to'xtatish */
+  overflow: hidden;
 }
 
 #myBtn {
