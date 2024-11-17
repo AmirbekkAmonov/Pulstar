@@ -1,0 +1,137 @@
+.contact {
+    width: 100%;
+    height: 125vh;
+    background-color: $fourth-color;
+    padding: 100px 24px ;
+    @media (max-width:700px) {
+        height: 130vh;
+    }
+    @media (max-width: 540px) {
+        padding: 0;
+        height: 150vh;
+    }
+    @media (max-width: 250px) {
+        height: 200vh;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        h3 {
+            color: $text-color;
+            font-size: 29px;
+            font-weight: 400;
+            line-height: 35.2px;
+            text-align: center;
+        }
+    }
+    &__content {
+        padding: 0 120px;
+        width: 100%;
+        height: calc(100vh - 250px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        @media (max-width: 850px) {
+            padding: 0 24px;
+            height: calc(100vh - 300px);
+        }
+        @media (max-width: 540px) {
+            display: block;
+            margin: 0 auto;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 40%;
+            width: 100%;
+        }
+        img {
+            width: 50%;
+            height: 100%;
+            @media (max-width: 540px) {
+                width: 100%;
+            }
+        }
+        &-text {
+            width: 50%;
+            height: 100%;
+            background-color: $contact-color;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            @media (max-width: 540px) {
+                padding: 6px;
+                width: 100%;
+            }
+            &-line {
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+                b {
+                    padding: 0 15px;
+                    color: $text-color;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 16px;
+                    text-align: center;
+                    
+                }
+                p {
+                    color: $text-color;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 31.99px;
+                    text-align: center;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    
+                }
+            }
+        }
+    }
+    &__brands {
+        padding: 50px 80px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        @media (max-width: 700px) {
+            padding: 0;
+            flex-wrap: wrap;
+        }
+        &-brand {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            @media (max-width:700px) {
+                width: 45%;
+            }
+            @media (max-width:566px) {
+                width: 35%;
+            }
+            img {
+                width: 128px;
+                height: auto;
+                margin-bottom: 20px;
+            }
+            p {
+                color: $text-color;
+                font-family: Roboto;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 21.33px;
+                text-align: center;
+                
+            }
+        }
+    }
+}
