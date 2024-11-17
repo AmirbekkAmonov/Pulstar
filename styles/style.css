@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   font-family: "roboto", sans-serif;
   background-color: #fff;
@@ -259,7 +258,7 @@ body {
 }
 .hero__carousel {
   position: absolute;
-  top: -80px; /* Hero bo‘limidan 100px yuqoriga ko‘tariladi */
+  top: -80px;
   right: 0;
   width: 60%;
   height: calc(100% + 80px);
@@ -271,8 +270,8 @@ body {
   .hero__carousel {
     position: static;
     top: 0;
-    width: 100%; /* Kichik ekranlar uchun to‘liq kenglik */
-    height: 500px; /* Balandlik avtomatik bo‘ladi */
+    width: 100%;
+    height: 500px;
   }
 }
 .hero__carousel .carousel {
@@ -283,7 +282,7 @@ body {
 }
 @media (max-width: 1024px) {
   .hero__carousel .carousel {
-    height: 500px; /* Kichik ekranlar uchun tasvir balandligi avtomatik */
+    height: 500px;
   }
 }
 .hero__carousel .carousel .carousel-item {
@@ -311,8 +310,8 @@ body {
   opacity: 1;
 }
 .hero__carousel .carousel-indicators {
-  position: absolute; /* Indikatorlar karusel ichida */
-  bottom: 20px; /* Karuselning pastki qismidan 20px yuqorida */
+  position: absolute;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -321,7 +320,7 @@ body {
 }
 @media (max-width: 1024px) {
   .hero__carousel .carousel-indicators {
-    bottom: 10px; /* Kichik ekranlarda indikator masofasi o‘zgartiriladi */
+    bottom: 10px;
   }
 }
 .hero__carousel .carousel-indicators .indicator {
