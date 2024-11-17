@@ -37,8 +37,6 @@ function toggleMenu() {
     const indicators = document.querySelectorAll(".indicator");
     let currentIndex = 0;
     let interval;
-
-    // Funksiya: Slaydni o'zgartirish
     const showSlide = (index) => {
         items[currentIndex].classList.remove("active");
         indicators[currentIndex].classList.remove("active");
@@ -47,24 +45,21 @@ function toggleMenu() {
         indicators[currentIndex].classList.add("active");
     };
 
-    // Avtomatik slayd funksiyasi
     const startAutoSlide = () => {
         interval = setInterval(() => {
             let nextIndex = (currentIndex + 1) % items.length;
             showSlide(nextIndex);
-        }, 5000); // 5 soniyadan keyin slayd o‘zgaradi
+        }, 5000);
     };
 
-    // Indikatorni bosganda slaydni almashtirish
     indicators.forEach((indicator) => {
         indicator.addEventListener("click", () => {
-            clearInterval(interval); // Avtomatik slaydni vaqtincha to‘xtatish
+            clearInterval(interval); 
             const index = parseInt(indicator.getAttribute("data-index"));
             showSlide(index);
-            startAutoSlide(); // Keyin avtomatik rejimni qayta ishga tushirish
+            startAutoSlide(); 
         });
     });
 
-    // Boshlash
     startAutoSlide();
 });
