@@ -22,3 +22,49 @@ function toggleMenu() {
     }
   }
   
+
+
+
+
+
+
+
+  
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".carousel-item");
+    const indicators = document.querySelectorAll(".indicator");
+    let currentIndex = 0;
+    let interval;
+
+    // Funksiya: Slaydni o'zgartirish
+    const showSlide = (index) => {
+        items[currentIndex].classList.remove("active");
+        indicators[currentIndex].classList.remove("active");
+        currentIndex = index;
+        items[currentIndex].classList.add("active");
+        indicators[currentIndex].classList.add("active");
+    };
+
+    // Avtomatik slayd funksiyasi
+    const startAutoSlide = () => {
+        interval = setInterval(() => {
+            let nextIndex = (currentIndex + 1) % items.length;
+            showSlide(nextIndex);
+        }, 5000); // 5 soniyadan keyin slayd o‘zgaradi
+    };
+
+    // Indikatorni bosganda slaydni almashtirish
+    indicators.forEach((indicator) => {
+        indicator.addEventListener("click", () => {
+            clearInterval(interval); // Avtomatik slaydni vaqtincha to‘xtatish
+            const index = parseInt(indicator.getAttribute("data-index"));
+            showSlide(index);
+            startAutoSlide(); // Keyin avtomatik rejimni qayta ishga tushirish
+        });
+    });
+
+    // Boshlash
+    startAutoSlide();
+});

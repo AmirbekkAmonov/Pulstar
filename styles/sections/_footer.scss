@@ -44,9 +44,9 @@
                     gap: 24px;
                 }
                 @media (max-width:670px) {
-                    width: calc(100% / 1 - 36px);
-                    height: calc(100% / 1 - 36px);
-                    margin: 0 auto;
+                    width: calc(80% );
+                    height: calc(100% / 3 );
+                    margin: 0 auto; 
                 }
          }
         }

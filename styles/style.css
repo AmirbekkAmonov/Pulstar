@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "roboto", sans-serif;
   background-color: #fff;
@@ -153,6 +154,193 @@ body {
   color: #fff;
 }
 
+.hero {
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 80px;
+  flex-wrap: wrap;
+}
+@media (max-width: 1024px) {
+  .hero {
+    margin-top: 30px;
+  }
+}
+.hero .container {
+  background-color: #3F3B3D;
+  display: flex;
+  align-items: center;
+  gap: 76px;
+  position: relative;
+  flex-wrap: wrap;
+}
+@media (max-width: 1024px) {
+  .hero .container {
+    width: 98%;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+.hero__content {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 32px;
+  padding: 256px 0 64px 64px;
+}
+@media (max-width: 1024px) {
+  .hero__content {
+    width: 100%;
+    padding: 64px 24px;
+  }
+}
+.hero__content h1 {
+  color: #DDDBDA;
+  font-size: 33px;
+  font-weight: 400;
+  line-height: 42.5px;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .hero__content h1 {
+    text-align: center;
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+@media (max-width: 480px) {
+  .hero__content h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+.hero__content-btns {
+  display: flex;
+  gap: 24px;
+}
+@media (max-width: 700px) {
+  .hero__content-btns {
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+.hero__content-btns .hero-btn {
+  padding: 12px 20px;
+  background-color: #f86335;
+  color: #DDDBDA;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.33px;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+@media (max-width: 700px) {
+  .hero__content-btns .hero-btn {
+    width: 100%;
+  }
+}
+.hero__content-btns .hero-btn:hover {
+  background-color: #F14814;
+}
+.hero__content-btns .btn2 {
+  background-color: transparent;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.hero__content-btns .btn2:hover {
+  background-color: transparent;
+  color: #DDDBDA;
+}
+.hero__carousel {
+  position: absolute;
+  top: -80px; /* Hero bo‘limidan 100px yuqoriga ko‘tariladi */
+  right: 0;
+  width: 60%;
+  height: calc(100% + 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .hero__carousel {
+    position: static;
+    top: 0;
+    width: 100%; /* Kichik ekranlar uchun to‘liq kenglik */
+    height: 500px; /* Balandlik avtomatik bo‘ladi */
+  }
+}
+.hero__carousel .carousel {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .hero__carousel .carousel {
+    height: 500px; /* Kichik ekranlar uchun tasvir balandligi avtomatik */
+  }
+}
+.hero__carousel .carousel .carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.hero__carousel .carousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .hero__carousel .carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.hero__carousel .carousel .carousel-item.active {
+  opacity: 1;
+}
+.hero__carousel .carousel-indicators {
+  position: absolute; /* Indikatorlar karusel ichida */
+  bottom: 20px; /* Karuselning pastki qismidan 20px yuqorida */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+@media (max-width: 1024px) {
+  .hero__carousel .carousel-indicators {
+    bottom: 10px; /* Kichik ekranlarda indikator masofasi o‘zgartiriladi */
+  }
+}
+.hero__carousel .carousel-indicators .indicator {
+  width: 20px;
+  height: 20px;
+  background-color: #DDDBDA;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+.hero__carousel .carousel-indicators .indicator.active {
+  opacity: 1;
+  background-color: #f86335;
+}
+.hero__carousel .carousel-indicators .indicator:hover {
+  opacity: 1;
+}
+
 .footer {
   padding: 96px 56px 36px 56px;
   background-color: #3F3B3D;
@@ -209,8 +397,8 @@ body {
 }
 @media (max-width: 670px) {
   .footer__content1-img img {
-    width: calc(100% - 36px);
-    height: calc(100% - 36px);
+    width: 80%;
+    height: 33.3333333333%;
     margin: 0 auto;
   }
 }
