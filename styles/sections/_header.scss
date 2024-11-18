@@ -13,28 +13,20 @@
 .header {
     padding: 30px 24px;
     .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include display-flex (space-between, center);
     }
     img {
         cursor: pointer;
     }
     &__content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include display-flex (space-between, center);
         gap: 20px;
         .header_links {
-            display: flex;
-            align-items: center;
+            @include display-flex (none, center);
             gap: 40px;
             a {
+                @include text-style(14px, 400, 21px, $text-color , none);
                 text-decoration: none;
-                color: $text-color;
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 21px;
                 transition: all 0.3s ease;
                 &:hover {
                     color: $second-color;
@@ -45,13 +37,10 @@
             }
         }
         &-btn {
+            @include text-style(12px, 400, 16px, $text-color , none);
             background-color: $third-color;
             border: none;
             padding: 12px 18px;
-            color: $text-color;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 16px;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -63,26 +52,20 @@
             }
         }
         &-icon {
+            @include display-flex (none, center);
             padding: 12px 13px;
-            display: flex;
-            align-items: center;
             gap: 10px;
             background-color: $fourth-color;
             img {
                 cursor: pointer;
             }
             &-count {
+                @include display-flex (center, none);
+                @include text-style(12px, 400, 16px, $primary-color , center);
                 width: 20px;
                 height: 20px;
                 border-radius: 50%;
                 background-color: $second-color;
-                color: $primary-color;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 12px;
-                font-weight: 400;
-                line-height: 16px;
             }
             @media (max-width: 220px) {
                 display: none;

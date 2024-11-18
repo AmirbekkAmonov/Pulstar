@@ -14,25 +14,18 @@
         height: 200vh;
     }
     .container {
-        display: flex;
+        @include display-flex (center, center);
         flex-direction: column;
-        align-items: center;
         gap: 32px;
         h3 {
-            color: $text-color;
-            font-size: 29px;
-            font-weight: 400;
-            line-height: 35.2px;
-            text-align: center;
+            @include text-style(29px, 400, 35.2px, $text-color , center);
         }
     }
     &__content {
+        @include display-flex (center, center);
         padding: 0 120px;
         width: 100%;
         height: calc(100vh - 250px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
         gap: 10px;
         @media (max-width: 850px) {
             padding: 0 24px;
@@ -54,39 +47,26 @@
             }
         }
         &-text {
+            @include display-flex (center, center);
             width: 50%;
             height: 100%;
             background-color: $contact-color;
-            display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
             @media (max-width: 540px) {
                 padding: 6px;
                 width: 100%;
             }
             &-line {
+                @include display-flex (center, center);
                 width: 80%;
-                display: flex;
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
                 gap: 12px;
                 b {
+                    @include text-style(12px, 400, 16px, $text-color , center);
                     padding: 0 15px;
-                    color: $text-color;
-                    font-size: 12px;
-                    font-weight: 400;
-                    line-height: 16px;
-                    text-align: center;
-                    
                 }
                 p {
-                    color: $text-color;
-                    font-size: 24px;
-                    font-weight: 400;
-                    line-height: 31.99px;
-                    text-align: center;
+                    @include text-style(24px, 400, 31.99px, $text-color , center);
                     text-underline-position: from-font;
                     text-decoration-skip-ink: none;
                     
@@ -95,22 +75,18 @@
         }
     }
     &__brands {
+        @include display-flex (center, center);
         padding: 50px 80px;
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         gap: 50px;
         @media (max-width: 700px) {
             padding: 0;
             flex-wrap: wrap;
         }
         &-brand {
+            @include display-flex (center, center);
             width: 25%;
-            display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             text-align: center;
             @media (max-width:700px) {
                 width: 45%;
@@ -124,13 +100,7 @@
                 margin-bottom: 20px;
             }
             p {
-                color: $text-color;
-                font-family: Roboto;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 21.33px;
-                text-align: center;
-                
+                @include text-style(16px, 400, 21.33px, $text-color , center);    
             }
         }
     }

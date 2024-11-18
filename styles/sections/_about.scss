@@ -3,65 +3,43 @@
     margin-bottom: 30px;
     margin-top: 80px;
     .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include display-flex (center, center);
         flex-direction: column;
     }
     h3 {
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 16px;
+        @include text-style(12px, 400, 16px, $span-color , center);
         letter-spacing: 1px;
-        text-align: center;
-        color: $span-color;
         margin-bottom: 16px;
     }
     p {
+        @include text-style(27px, 400, 37.32px, $text-color , center);
         width: 60%;
-        color: $text-color;
-        font-size: 27px;
-        font-weight: 400;
-        line-height: 37.32px;
         letter-spacing: 0.5600000023841858px;
-        text-align: center;
         margin-bottom: 60px;
         @media (max-width: 700px) {
             width: 98%;
         }
     }
     &__content {
+        @include display-flex (center, center);
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         gap: 32px;
         @media (max-width: 350px) {
             flex-wrap: wrap;
         }
         &-brand {
-            display: flex;
+            @include display-flex (center, center);
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
             gap: 12px;
             img {
                 width: 80px;
                 height: 80px;
             }
             b {
-                color: $text-color;
-                font-size: 21px;
-                font-weight: 400;
-                line-height: 24.96px;
-                text-align: center;
+                @include text-style(21px, 400, 24.96px, $text-color , center);
             }
             p {
-                color: $text-color;
-                font-size: 12px;
-                font-weight: 400;
-                line-height: 16px;
-                text-align: center;                
+                @include text-style(12px, 400, 16px, $text-color, center);        
             }
         }
     }

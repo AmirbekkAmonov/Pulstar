@@ -8,9 +8,8 @@
         margin-top: 30px;
     }
     .container {
+        @include display-flex (none, center);
         background-color: $background-color;
-        display: flex;
-        align-items: center;
         gap: 76px;
         position: relative;
         flex-wrap: wrap;
@@ -21,11 +20,9 @@
         }
     }
     &__content {
+        @include display-flex (start, flex-start);
         width: 32%;
-        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: start;
         gap: 32px;
         padding: 256px 0 64px 64px;
         @media (max-width: 1024px) {
@@ -33,20 +30,13 @@
             padding: 64px 24px;
         }
         h1 {
-            color: $third-color;
-            font-size: 33px;
-            font-weight: 400;
-            line-height: 42.5px;
-            text-align: left;
+            @include text-style(33px, 400, 42.5px, $third-color , left);
             @media (max-width: 768px) {
-                text-align: center;
-                font-size: 28px; 
-                line-height: 36px;
+                @include text-style(28px, 400, 36px, $third-color , center);
             }
 
             @media (max-width: 480px) {
-                font-size: 24px;
-                line-height: 32px;
+                @include text-style(24px, 400, 32px, $third-color , center);
             }
         }
         &-btns {
@@ -58,13 +48,9 @@
                 margin: 0 auto;
             }
             .hero-btn {
+                @include text-style(16px, 400, 21.33px, $third-color , center);
                 padding: 12px 20px;
                 background-color: $hover-color;
-                color: $third-color;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 21.33px;
-                text-align: center;
                 border: none;
                 border-radius: 3px;
                 transition: all 0.3s ease;
@@ -88,14 +74,13 @@
         }
     }
     &__carousel {
+        @include display-flex (none, center);
         position: absolute;
         top: -80px; 
         right: 0;
         width: 60%;
         height: calc(100% + 80px);
-        display: flex;
         flex-direction: column;
-        align-items: center;
         @media (max-width: 1024px) {
             position: static;
             top: 0;
@@ -136,12 +121,11 @@
         }
 
         .carousel-indicators {
+            @include display-flex (center, none);
             position: absolute; 
             bottom: 20px; 
             left: 50%;
             transform: translateX(-50%);
-            display: flex;
-            justify-content: center;
             gap: 10px;
             @media (max-width: 1024px) {
                 bottom: 10px; 

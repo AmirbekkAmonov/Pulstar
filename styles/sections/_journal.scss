@@ -1,7 +1,5 @@
 .journal-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+  @include display-flex (space-between, flex-start);
     margin: 2rem auto;
     max-width: 1238px;
     gap: 2rem;
@@ -44,9 +42,7 @@
         }
   
         a {
-          font-size: 0.9rem;
-          font-weight: bold;
-          color: #0073e6;
+          @include text-style(0.9rem, bold, none, #0073e6 , none);
           text-decoration: none;
   
           &:hover {
@@ -60,20 +56,12 @@
       flex: 1;
       height: 600px;
       h2 {
-        font-size: 52px;
-        font-weight: 400;
-        line-height: 56px;
+        @include text-style(52px, 400, 56px, #333, left);
         letter-spacing: 0.5600000023841858px;
-        text-align: left;
-
-
       }
   
       .read-latest {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 21.33px;
-        text-align: left;
+        @include text-style(16px, 400, 21.33px, #333, left);
         margin-bottom: 11rem;
         @media (max-width: 940px) {
             margin-bottom: 5rem;
@@ -93,10 +81,8 @@
         }
   
         .entry-details {
-          display: flex;
+          @include display-flex (space-between, none);
           flex-direction: column;
-          justify-content: space-between;
-  
           span {
             font-size: 0.8rem;
             color: #999;
